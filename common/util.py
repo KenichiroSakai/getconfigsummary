@@ -8,16 +8,17 @@ Copyright (c) 2023-2024 Fujitsu Limited.  All rights reserved.
 
 __version__ = '1.01'
 
-import os
+import os, sys
 import argparse
 import re
 
 class TerminalColor:
     """ ターミナル色変更用クラス """
     
-    import platform
+#    import platform
 
-    if platform.system() == 'Windows':
+#    if platform.system() == 'Windows':
+    if sys.platform.lower().startswith("win"):
 
         # WindowsにおけるSetConsoleModeの有効化 
         import ctypes
