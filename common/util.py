@@ -15,9 +15,6 @@ import re
 class TerminalColor:
     """ ターミナル色変更用クラス """
     
-#    import platform
-
-#    if platform.system() == 'Windows':
     if sys.platform.lower().startswith("win"):
 
         # WindowsにおけるSetConsoleModeの有効化 
